@@ -1,0 +1,67 @@
+<html>
+<head>
+		<style>
+		body{
+		background-image:url("2.jpg");
+		}
+		h1{
+		color:#fff;
+		text-align:center;
+		}
+		.box{
+		position:absolute;
+		top:40%;
+		left:40%;
+		padding:30px;
+		}
+		.ipbox{
+		position:relative;
+		}
+		.ipbox input{
+		
+		
+		
+		}
+		.sbtn{
+		padding:10px;
+		position:absolute;
+		left:73px;
+		
+		
+		}
+		h4{
+		color:#fff;
+		position:absolute;
+		top:35%;
+		left:43%;
+		}
+		</style>
+	<script>
+	function validation()
+	{
+	var result=true;
+	var e=document.getElementsByName("email")[0].value;
+	var atindex=e.indexOf('@');
+	var dotindex=e.lastIndexOf('.');
+	if(atindex<2 ||dotindex>=e.length-2 ||dotindex-atindex<3)
+	result=false;
+	return(result);
+	}
+	
+	</script>
+</head>
+	<body>
+	<h1>Welcome to the Email Validation page</h1>
+	
+	<h4>Enter your Email ID</h4>
+	<form class="box" onSubmit="return validation()">
+	<div class="ipbox">
+	 <input type="text" name="email" required/>
+	 <label></label>
+	 </div>
+	 <div class="sbtn">
+	<input type="submit" value="Register" />
+	</div>
+	</form>
+	</body>
+</html>
